@@ -27,6 +27,7 @@ docker container prune
 ### Criando pod dentro do cluster
 ```
 kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 ```
 
 ### Verificando pod
@@ -39,6 +40,31 @@ kubectl get po
 kubectl get svc
 ```
 
+### deletando pod
+```
+kubectl delete pod <pod-name>
+
+```
+
 ### Assistir pods em tempo de exec
 ```
 watch 'kubectl get po'
+
+```
+
+### Acessando cluster (docker container)
+```
+docker exec -it <container-name> sh
+```
+
+### Acessando pod dentro do cluster
+Primeiro executa passo acima
+
+```
+kubectl exec -it <pod-name> -- sh
+```
+
+### Bind de portas pod
+```
+kubectl port-forward svc/<service-name> <port-local>:<port-exposed-by-docker-image>
+```

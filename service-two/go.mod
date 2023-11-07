@@ -1,6 +1,6 @@
 module github.com/mateusVedoy/go-pods-poc/service/two
 
-go 1.20
+go 1.27
 
 require (
 	github.com/bytedance/sonic v1.9.1 // indirect

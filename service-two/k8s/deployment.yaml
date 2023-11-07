@@ -13,21 +13,6 @@ spec:
         app: service-two
     spec:
       containers:
-      - image: service-two:v1
+      - image: svc-2:v1
         imagePullPolicy: IfNotPresent
         name: service-two
-        readinessProbe:
-          httpGet:
-            path: /health
-            port: 8081
-            scheme: HTTP
-          initialDelaySeconds: 60
-          periodSeconds: 10
-          failureThreshold: 5
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8081
-            scheme: HTTP
-          initialDelaySeconds: 60
-          periodSeconds: 10
