@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: service-two
+  name: service-one
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: service-two
+      app: service-one
   template:
     metadata:
       labels:
-        app: service-two
+        app: service-one
     spec:
       containers:
-      - image: svc-2:v1
+      - image: svc-1:v1
         imagePullPolicy: IfNotPresent
-        name: service-two
+        name: service-one

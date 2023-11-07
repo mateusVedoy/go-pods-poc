@@ -1,3 +1,8 @@
+# Go Pods Poc
+Este projeto é uam poc em Go que busca gerenciar pods de uma aplicação a partir de outra aplicação.
+
+## Comandos úteis
+
 ### Criando cluster via Kind
 ```
 kind create cluster --name <cluster-name>
