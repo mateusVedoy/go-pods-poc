@@ -1,4 +1,4 @@
-FROM golang:1.17.0-alpine3.14 as builder
+FROM golang:1.20.0-alpine3.17 as builder
 
 WORKDIR /go/src/github.com/mateusVedoy/go-pods-poc.git/service-two
 

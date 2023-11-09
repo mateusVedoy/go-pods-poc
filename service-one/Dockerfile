@@ -1,4 +1,4 @@
-FROM golang:1.17.0-alpine3.14 as builder
+FROM golang:1.20.0-alpine3.17 as builder
 
 WORKDIR /go/src/github.com/mateusVedoy/go-pods-poc.git/service-one
 
@@ -16,14 +16,18 @@ FROM alpine:3.17
 
 WORKDIR /app
 
-COPY --from=builder /go/src/github.com/mateusVedoy/go-pods-poc.git/service-one/main .
+# ENV KUBERNETES_SERVICE_HOST=10.96.0.1
+# ENV KUBERNETES_SERVICE_PORT=443
 
+COPY --from=builder /go/src/github.com/mateusVedoy/go-pods-poc.git/service-one/main .
+COPY --from=builder /go/src/github.com/mateusVedoy/go-pods-poc.git/service-one/kubeconfig.yaml .
 
 ENV TZ=America/Sao_Paulo
 RUN apk update && \
     apk add --no-cache tzdata curl unzip && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
     curl -sS https://infraestructure-dependencies.s3.amazonaws.com/bootstrap/linux/tzupdate-alpine.sh|sh
+
 
 # ADD k8s k8s
 

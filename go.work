@@ -1,3 +1,6 @@
 go 1.20
 
-use ./service-two
+use (
+	./service-one
+	./service-two
+)
