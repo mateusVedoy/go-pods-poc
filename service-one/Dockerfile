@@ -16,8 +16,8 @@ FROM alpine:3.17
 
 WORKDIR /app
 
-# ENV KUBERNETES_SERVICE_HOST=10.96.0.1
-# ENV KUBERNETES_SERVICE_PORT=443
+ENV KUBERNETES_SERVICE_HOST=10.96.0.1
+ENV KUBERNETES_SERVICE_PORT=443
 
 COPY --from=builder /go/src/github.com/mateusVedoy/go-pods-poc.git/service-one/main .
 COPY --from=builder /go/src/github.com/mateusVedoy/go-pods-poc.git/service-one/kubeconfig.yaml .

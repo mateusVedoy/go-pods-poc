@@ -14,7 +14,7 @@ metadata:
 rules:
   - apiGroups: ["apps", "extensions"]
     resources: ["deployments"]
-    resourceNames: ["service-one"]
+    # resourceNames: ["service-one"]
     verbs: ["get", "patch", "list", "watch", "update"]
 ---
 #Cria o bind entre as duas configs acima
