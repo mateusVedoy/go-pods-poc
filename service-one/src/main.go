@@ -41,9 +41,9 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 
 	if isInClusterConfig() {
 		enviroment = "K8S Cluster"
+	} else {
+		enviroment = "local machine"
 	}
-
-	enviroment = "local machine"
 
 	fmt.Fprintf(w, "Hey, I'm alive and running at "+enviroment)
 }
