@@ -1,13 +1,18 @@
+# comando p instalar kind
+
 cluster:
 	@kind create cluster
 
 kubeconfig:
 	@kind get kubeconfig > ./service-one/kubeconfig.yaml
 
-docker-images:
-	@cd ./service-one/ ; docker build -t svc-1:v1 . ; cd ../service-two/. ; docker build -t svc-2:v1 .
+local-docker-img:
+	@cd ./service-one/ ; docker build -t svc-1:v1 -f outCluster.Dockerfile . ; cd ../service-two/. ; docker build -t svc-2:v1 .
 
-docker-images-to-cluster:
+cluster-docker-img:
+	@cd ./service-one/ ; docker build -t svc-1:v1 -f inCluster.Dockerfile . ; cd ../service-two/. ; docker build -t svc-2:v1 .
+# Ajuster makefile
+cluster-docker-img-to-cluster:
 	@kind load docker-image svc-1:v1
 	@kind load docker-image svc-2:v1
 
