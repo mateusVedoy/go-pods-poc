@@ -39,6 +39,8 @@ in-port-forward:
 	@kubectl port-forward svc/service-one 8081:8081 &
 	@kubectl port-forward svc/service-two 8080:8080 &
 
+## Drop configs
+
 drop-docker-images:
 	@docker rmi -f svc-1:v1
 	@docker rmi -f svc-2:v1
