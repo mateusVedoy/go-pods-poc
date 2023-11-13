@@ -33,8 +33,6 @@ kubetcl apply -f deployment.yaml
 kubectl apply -f service.yaml
 ```
 
-#### #5 Aplicar arquivos de config K8S
-
 ##### Requisitos: estar em *./service-one/k8s*
 
 ```
@@ -43,7 +41,7 @@ kubectl apply -f service.yaml
 kubectl apply -f configs.yaml
 ```
 
-#### #6 Expor porta do serviço para máquina
+#### #5 Expor porta do serviço para máquina
 
 ##### Requisitos: estar em *./service-two/k8s*
 
