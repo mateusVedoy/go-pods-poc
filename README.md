@@ -12,7 +12,7 @@ Este projeto é uma poc em Go que busca gerenciar pods de uma aplicação a part
 * Localmente
 * Cluster
 
-### Rodando locamente
+### Rodando localmente
 [Doc Aqui](./docs/Local.README.md)
 
 ### Rodando no cluster

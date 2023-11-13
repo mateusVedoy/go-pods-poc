@@ -1,4 +1,4 @@
-## Rodando locamente
+## Rodando localmente
 Opcionalmente há comandos Makefile para executar passos abaixo. 
 
 #### #1 Criar cluster
