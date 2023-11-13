@@ -13,6 +13,8 @@ Este projeto é uam poc em Go que busca gerenciar pods de uma aplicação a part
 ### Rodando locamente
 [Doc Aqui](./docs/Local.README.md)
 
+### Rodando no cluster
+[Doc Aqui](./docs/cluster.README.md)
 
 ## Respostas
 
