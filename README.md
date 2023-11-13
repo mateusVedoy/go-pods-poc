@@ -5,8 +5,8 @@ Este projeto é uma poc em Go que busca gerenciar pods de uma aplicação a part
 
 ## Dependências
 * Go versão 20
-* Kind
-* Kubectl
+* [Kind](https://kind.sigs.k8s.io/)
+* [Kubectl](https://kubernetes.io/pt-br/docs/tasks/tools/#kubectl)
 
 ## Formas de rodar
 * Localmente
