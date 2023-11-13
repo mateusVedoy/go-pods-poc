@@ -41,5 +41,14 @@ Ex.:
 Error building config from flags. Reason: stat ./kubeconfig.yaml: no such file or directory
 ```
 
+### Acompanhando os pods em tempo real
+
+Requisitos: Rodar comando via terminal
+```
+watch 'kubectl get po'
+```
+Haverá algo similar à imagem abaixo:
+![watch-pods](./docs/img/watch-pods.png)
+
 ### Lista de comandos úteis
 [Doc Aqui](./docs/commands.README.md)
